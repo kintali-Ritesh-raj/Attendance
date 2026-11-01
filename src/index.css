@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+/* Print only the open salary slip, not the whole dashboard */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #payslip,
+  #payslip * {
+    visibility: visible;
+  }
+  #payslip {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+  }
+}
